@@ -23,6 +23,9 @@
             <p>
                 <a href="/campgrounds/new" class="btn btn-primary btn-large">Add new campground</a>    
             </p>
+            <p>
+                <a href="/campgrounds/delete" class="btn btn-danger btn-large">Delete campground</a>
+            </p>
         </div>
     </header>
 
@@ -32,8 +35,11 @@
                 <div class="thumbnail">
                     <img src=" <%= camp.image %>" alt="campground">
                     <div class="caption">
-                        <h4> <%= camp.title %> </h4>
+                        <h4> <%= camp.name %> </h4>
                     </div>
+                    <p>
+                        <a href="/campgrounds/<%= camp._id %>" class="btn btn-primary">More Info</a>
+                    </p>
                 </div>
             </div>            
        <%}) %>
